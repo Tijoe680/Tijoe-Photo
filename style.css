@@ -198,17 +198,6 @@ textarea{
     display: flex;
     justify-content: center;
 }
-.butt{
-    position: absolute;
-    top: 86%;
-    right: 100px;
-    transform: translateY(-50%);
-    padding: 10px 20px;
-    cursor: pointer;
-    background: gray;
-    border-radius: 21px;
-    
-}
 marker{
     display: none;
 }
