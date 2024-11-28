@@ -1,0 +1,398 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #404040
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;  
+}  
+
+/* Menu */
+#menu {
+    position: relative;
+    background-color: #D9D9D9;
+    border: 3px solid #A6998A;
+    border-radius: 8px;
+    align-items: center;
+
+}
+
+
+#menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+
+/* Bouton burger masqué par défaut en mode desktop */
+#menu button {
+    display: none;
+    background-color: #404040;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px; /* Ajuste le top pour compenser le header */
+    gap: 10px;
+}
+
+
+.logo1{        /*dans le footer de la page d'accueil*/
+    width: 100%;
+    height: 85px;
+    background-color: #D9D9D9;
+}
+
+
+
+nav a:hover {
+    color: rgb(255, 255, 255); /* Couleur du texte au survol */
+}
+
+nav a:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Scintillement */
+} 
+
+main{
+    margin-top: 8em;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive; 
+    font-size: 6vw;
+    color: #D9D9D9; 
+}
+
+h2{
+    text-align: center;
+    font-family: cursive;
+}
+
+button{
+    border-color: #000000;
+    background-color: #d9d9d9b7;
+    align-content: center;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 25px;
+    width: 105px;
+    height: 43px;
+}
+
+
+
+p{
+    color: #A6998A;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cle{
+    color: #8C695D;
+    font-size: x-large;
+}
+
+
+.parallax {
+    background-image: url('image/QTIT2546.jpg');
+    height: 500px; /* Ajuste cette valeur selon tes besoins */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Pour le positionnement absolu du texte */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Couleur du texte */
+    text-align: center;
+    background-color: #c0b4a65d;
+    border-radius: 30px;
+}
+
+.pic{
+    color: #A6998A;
+    text-align: center;
+    font-size: 67px;
+}
+
+.parallax2 {
+    background-image: url('image/YDUG7329.jpg');
+    height: 500px; /* Ajuste cette valeur selon tes besoins */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Pour le positionnement absolu du texte */
+}
+.ana-num{
+    padding: 30px;
+    margin: 50px;
+}
+
+.text-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Couleur du texte */
+    text-align: center;
+    background-color: #c0b4a65d;
+    border-radius: 30px;
+}
+
+fieldset{
+    width: 93%;
+    margin: 35px;
+}
+
+.style{
+    margin-top: 45px;
+}
+
+.form-control{
+    background-color: #D9D9D9;
+}
+.form-label1{
+    margin-left: 14em;
+}
+
+textarea{
+    width: 400px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 5em;
+    background-color: #D9D9D9;
+}
+/* bouton carousel */
+.but{
+    display: flex;
+    justify-content: center;
+}
+.butt{
+    position: absolute;
+    top: 86%;
+    right: 100px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    background: gray;
+    border-radius: 21px;
+    
+}
+marker{
+    display: none;
+}
+b{
+    color: white;
+}
+.voirPlusButton{
+    background-color: #000000;
+}
+/* Style initial */
+.lot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 234px;
+    height: 0vh; /* Hauteur initiale */
+    overflow: hidden; /* Empêche le contenu de dépasser */
+    transition: height 4s ease; /* Transition fluide */
+}
+
+/* Style après le clic */
+.lot.expanded {
+    height: 100vh; /* Hauteur finale */
+}
+
+.scene {
+    width: 472.5px;  /* Augmenté de 5% (450px * 1.05) */
+    height: 367.5px; /* Augmenté de 5% */
+    position: relative;
+    perspective: 1470px; /* Distance de perspective augmentée */
+    display: flex;
+    margin-left: 300px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-525px) rotateY(0deg); /* Distance Z augmentée */
+    animation: rotate 35s infinite linear; /* Rotation automatique */
+}
+
+.carousel__cell {
+    position: absolute;
+    width: 315px; /* Taille des cellules augmentée (300px * 1.05) */
+    height: 210px; /* Hauteur augmentée */
+    left: 78.75px; /* Centrage ajusté (75px * 1.05) */
+    top: 78.75px;
+    background: #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform-origin: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel__cell img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Placement des cellules en cercle avec plus d'espace */
+.carousel__cell:nth-child(1) { transform: rotateY(0deg) translateZ(525px); }
+.carousel__cell:nth-child(2) { transform: rotateY(40deg) translateZ(525px); }
+.carousel__cell:nth-child(3) { transform: rotateY(80deg) translateZ(525px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(525px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(525px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(525px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(525px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(525px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(525px); }
+
+/* Animation */
+@keyframes rotate {
+    from {
+        transform: translateZ(-525px) rotateY(0deg);
+    }
+    to {
+        transform: translateZ(-525px) rotateY(360deg);
+    }
+}
+.full{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************************footer*********************************************/
+
+a{
+    color: #000000;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100px;
+    
+}
+footer{
+    margin-top: 100px;
+}
+.logo1 {
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les logos */
+    width: 100%; /* Ajustez la largeur globale du conteneur (optionnel) */
+    margin: 0 auto; /* Centre le conteneur horizontalement (optionnel) */
+  }
+
+  .menu-logo {
+    font-size: 2rem; /* Taille des logos */
+  }
+
+#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/************************************************* Responsive **********************************************/
+@media screen and (max-width: 725px) {
+
+    header {
+        position: static; /* Retire la position fixe en mode mobile */
+    }
+    /* Afficher le bouton burger et masquer le menu par défaut */
+    #menu button {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        justify-content: center;
+    }
+    #menu a{
+        color: beige;
+    }
+    #menu ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: #404040;
+    }
+    .container{
+        margin-top: 11px;
+    }
+    /* Afficher le menu lorsque la classe visible est ajoutée */
+    #menu ul.visible {
+        display: flex;
+    }
+    .lot{
+    margin-right: -5px;
+    }
+    .scene {
+    width: 113%; /* Réduit la largeur pour mieux s'adapter */
+    /*height: auto;  Ajuste la hauteur automatiquement */
+    margin: 0 auto; /* Centre horizontalement */
+    }
+    .lot.expanded{
+    height: 60vh;
+    margin-top: 25px;
+    }
+
+    .carousel {
+    transform: translateZ(-300px); /* Ajuste la perspective pour l'écran réduit */
+    }
+
+    .carousel__cell {
+    width: 200px; /* Réduit la taille des cellules */
+    height: 120px;
+    left: auto; /* Supprime les décalages fixes */
+    top: auto;
+    }
+  
+}
+
