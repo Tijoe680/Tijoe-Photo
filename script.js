@@ -36,5 +36,35 @@ toggleButton.addEventListener('click', () => {
         // Masque immédiatement le bouton
         voirPlusButton.style.display = 'none';
     }
+}); 
+
+////////////////////pop up////////////////////////////////////////////////////
+// Récupère toutes les images du carrousel
+const carouselImages = document.querySelectorAll('.carousel__cell img');
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popupImage');
+const closePopup = document.getElementById('closePopup');
+const popupOverlay = document.getElementById('popupOverlay');
+
+// Ajoute un événement de clic à chaque image
+carouselImages.forEach(image => {
+    image.addEventListener('click', () => {
+        // Affiche la pop-up avec l'image cliquée
+        popupImage.src = image.src;
+        popup.style.display = 'block';
+        popupOverlay.style.display = 'block';
+    });
+});
+
+// Ferme la pop-up quand le bouton "X" est cliqué
+closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    popupOverlay.style.display = 'none';
+});
+
+// Ferme la pop-up quand on clique sur l'arrière-plan
+popupOverlay.addEventListener('click', () => {
+    popup.style.display = 'none';
+    popupOverlay.style.display = 'none';
 });
 
