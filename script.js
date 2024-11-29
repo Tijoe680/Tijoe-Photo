@@ -1,4 +1,7 @@
-// script.js
+document.querySelector("#menu button").onclick = function() {
+    document.querySelector("#menu ul").classList.toggle("visible");
+}; 
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.carousel');
     let angle = 0;
