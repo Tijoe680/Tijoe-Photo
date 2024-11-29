@@ -396,5 +396,8 @@ footer{
     #closePopup{
         display: none;
     }
+     #popup{
+        width: 88%;
+    }
 }
 
