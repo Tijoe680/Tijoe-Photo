@@ -178,7 +178,12 @@ fieldset{
 .style{
     margin-top: 45px;
 }
-
+#toggleButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center; /* Centre le texte dans le bouton */
+    cursor: pointer;
+}
 .form-control{
     background-color: #D9D9D9;
 }
